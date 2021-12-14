@@ -10,9 +10,10 @@
 		<meta property="og:url" content="https://bink.binaria.art.br" />
 		<meta property="og:image" content="https://bink.binaria.art.br/images/og-image.jpg" />
 		<meta property="og:description" content="O 1° Token brasileiro criado para Artistas e Galerias de Arte." />
-
+		<link rel="shortcut icon" href="https://bink.binaria.art.br/art-symbol.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
 	</head>
 	<body class="is-preload">
 
@@ -63,19 +64,19 @@
 							<p>
 								1. No Metamask encontre a opção: <i>Add Network (adicionar rede)</i><br />
 								2. Preencha os campos com os seguintes dados:<br />
-									 Network Name: Binance Smart Chain<br />
-									 New RPC URL: https://bsc-dataseed.binance.org/<br />
-									 ChainID: 56<br />
-									 Symbol: BNB<br />
-   								 Block Explorer URL: https://bscscan.com
+									 Network Name: <strong>Binance Smart Chain</strong><br />
+									 New RPC URL: <strong>https://bsc-dataseed.binance.org/</strong><br />
+									 ChainID: <strong>56</strong><br />
+									 Symbol: <strong>BNB</strong><br />
+   								 Block Explorer URL: <strong>https://bscscan.com</strong>
 							</p>
 							<p>Após a instalação e configuração do Metamask, adicione o Token em sua lista:</p>
-							<p>Metamask > Import Tokens > Adicionar Smart Contract: 0x170D146C19DBda013318D5AF08B6F3FB8c22AEF1</p>
+							<p>Metamask > Import Tokens > Adicionar Smart Contract: <strong>0x170D146C19DBda013318D5AF08B6F3FB8c22AEF1</strong></p>
 
 							<ul class="actions stacked">
 								<li><a onclick="addBink()" class="button">Adicionar Bink (ART$) ao Metamask</a> </li>
 							</ul>
-							
+
 						</div>
 
 					</section>
@@ -91,11 +92,6 @@
 									<span class="icon style2 major fa-gem"></span>
 									<h3>ART$ <img src="art-symbol.png" style="width: 8%;"></h3>
 									<p>12/2021 - Lançamento do Smart Contract do Token</p>
-								</section>
-								<section>
-									<span class="icon solid style2 major fa-paper-plane"></span>
-									<h3>Free Drop</h3>
-									<p>12/2021 - Drop inicial gratuito de 100 ART$ até o fim de 04/2022</p>
 								</section>
 								<section>
 									<span class="icon solid style2 major fa-save"></span>
@@ -152,7 +148,7 @@
 									<li><input type="submit" name="submit" id="submit" value="Fale conosco!" /></li>
 								</ul>
 							</form>
-							<p><strong>Para o drop de 100 ART$ envie sua carteira (0x...) para: <a href="mailto:binaria.art@gmail.com">binaria.art@gmail.com</a>. <br /><br />Atenção: Não inserir chaves privadas ou outras informações sensíveis <br />que possam comprometer a integridade da sua carteira.</strong></p>
+
 						</div>
 					</section>
 
@@ -172,7 +168,7 @@
 
 			</div>
 
-		<!-- Scripts -->
+			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -180,36 +176,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				async function addBink() {
-					const tokenAddress = '0x170D146C19DBda013318D5AF08B6F3FB8c22AEF1';
-					const tokenSymbol = 'ART$';
-					const tokenDecimals = 18;
-					const tokenImage = 'https://bink.binaria.art.br/art-symbol.png';
-
-					try {
-						const wasAdded = await ethereum.request({
-							method: 'wallet_watchAsset',
-							params: {
-								type: 'ERC20',
-								options: {
-									address: tokenAddress,
-									symbol: tokenSymbol, 
-									decimals: tokenDecimals,
-									image: tokenImage,
-								},
-							},
-						});
-
-						if (wasAdded) {
-							console.log('ART$ adicionado');
-						} else {
-							console.log('Erro ao adicionar Token');
-						}
-					} catch (error) {
-						console.log(error);
-					}
-				}
-			</script>
+			<script src="assets/js/bundle.js"></script>
 	</body>
 </html>
