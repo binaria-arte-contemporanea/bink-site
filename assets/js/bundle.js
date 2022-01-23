@@ -10,31 +10,6 @@ var tabs = new Tabs({
 });
 
 // Add Bink (ART$) to Wallet list
-async function addBinkBNB() {
-  try {
-    const wasAdded = await ethereum.request({
-      method: 'wallet_watchAsset',
-      params: {
-        type: 'ERC20',
-        options: {
-          address: tokenAddressBNB,
-          symbol: tokenSymbol, 
-          decimals: tokenDecimals,
-          image: tokenImage,
-        },
-      },
-    });
-
-    if (wasAdded) {
-      console.log('ART$ adicionado');
-    } else {
-      console.log('Erro ao adicionar Token');
-    }
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 async function addBinkMatic() {
   try {
     const wasAdded = await ethereum.request({
