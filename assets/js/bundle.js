@@ -1,7 +1,7 @@
 const tokenAddressMatic = '0xa267622987b75e1d37ffb8134a1f9ee3435fbb28';
 const tokenSymbol = 'ART$';
 const tokenDecimals = 18;
-const tokenImage = 'https://bink.binaria.art.br/art-symbol.png';
+const tokenImage = 'https://bink.art.br/art-symbol.png';
 
 const dropAddress = "0x3d90c6667d767020fa0a75dd77f763ce5d806556"; // Mainnet
 //const dropAddress = "0xbb9aea25534745d8231d977262e41edcc38bba6b"; // Testnet
@@ -41,7 +41,6 @@ async function faucetBinkMatic() {
     to: dropAddress,
     data: '0xb46300ec',
     chainId: '0x89', 
-    
   };
 
   const faucetTxHash = await ethereum.request({
