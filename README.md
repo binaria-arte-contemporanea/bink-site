@@ -1,2 +1,2 @@
 # BINK - Site
-Bink é um projeto desenvolvido pela Galeria Binaria Arte Contemporânea.
+Bink é um projeto desenvolvido pelo Grupo Binaria.
